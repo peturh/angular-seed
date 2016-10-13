@@ -1,6 +1,7 @@
 <div class="container m-t-2" ng-controller="MainController as main" ng-init="main.init()">
     <div class="row">
         <div class="col-md-6">
+            <input class="input" ng-model="main.myInputField"> {{main.myInputField}}
             <div ng-repeat="item in main.secondList">
                 <div class="card">
                     <img class="card-img-top" src="//placeholdit.imgix.net/~text?txtsize=33&txt=440%C3%97150&w=440&h=150" alt="Card image cap">

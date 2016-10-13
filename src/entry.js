@@ -11,6 +11,7 @@ var app = require('app');
 var routes = require('configs/routes');
 // Controllers
 var MainController = require('controllers/MainController');
+var OfferController = require('controllers/OfferController');
 
 // Directives
 
@@ -20,5 +21,6 @@ var APIService = require('services/APIService');
 
 var MainTemplate = require('main.html');
 var ToolbarTemplate = require('toolbar.html');
+var OfferTemplate = require('offer.html');
 
 var stylesheetsLess = require('stylesheets.less');

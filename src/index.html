@@ -16,7 +16,8 @@
 <body ng-app="app">
 <div ng-controller="MainController as main" ng-cloak ng-init="main.init()">
     <div ng-include="'toolbar.html'"></div>
-    <div ng-include="'main.html'" ></div>
+    <div ui-view></div>
+
 </div>
 
 </body>

@@ -30,27 +30,51 @@ app.get('/getSomething', function (req, res) {
     var listWithObjects= [
         {
             name: "First",
-            id: "1"
+            id: "1",
+            url : "www.google.com/bild.jpg",
+            description : "detta är texten",
+
         },
         {
             name: "Second",
-            id: "2"
+            id: "2",
+            url : "www.google.com/bild.jpg",
+            description : "detta är texten",
         },
         {
             name: "Third",
-            id: "3"
+            id: "3",
+            url : "www.google.com/bild.jpg",
+            description : "detta är texten",
         },
         {
             name: "Fourth",
-            id: "4"
+            id: "4",
+            url : "www.google.com/bild.jpg",
+            description : "detta är texten",
         },
         {
             name: "The End",
-            id: "5"
+            id: "5",
+            url : "www.google.com/bild.jpg",
+            description : "detta är texten",
         }
     ];
 
     res.send(listWithObjects);
+});
+
+app.get('/offer/:id', function(req,res){
+    var id = req.params.id;
+    console.log(id);
+
+    var offer = {
+        name : "The Name of the offer",
+        description : "The description of the offer"
+    };
+
+    res.send(offer);
+
 });
 
 /**
@@ -62,11 +86,11 @@ app.get('/getSomething', function (req, res) {
  * @param data - The path specific data
  */
 
-function apiPost(path, data, callback) {
+function apiGet(path, data, callback) {
 
     var fullPath = url + path;
     var options = {
-        url: fullPath,
+        url: "www.apiary.io/myApi/route",
         data: data,
         mimeType: 'application/json'
     };

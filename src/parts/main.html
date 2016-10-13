@@ -1,4 +1,4 @@
-<div class="container m-t-2">
+<div class="container m-t-2" ng-controller="MainController as main" ng-init="main.init()">
     <div class="row">
         <div class="col-md-6">
             <div ng-repeat="item in main.secondList">
@@ -8,7 +8,7 @@
                         <h4 class="card-title">{{item.name}}</h4>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of
                             the card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a ng-click="main.goToOffer($index)" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>

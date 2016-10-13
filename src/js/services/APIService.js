@@ -4,24 +4,6 @@ app.service('APIService', ['$http', function ($http) {
 
     var service = {};
 
-    /**
-     * Get specific ID from API
-     * @returns {*} - The sites available
-     */
-    service.getSomething = function (id) {
-        return $http(
-            {
-                method: 'GET',
-                url: "/getSomethingWithId/"+id
-            })
-            .success(function (data, status) {
-                return data;
-            })
-            .error(function (data, status) {
-                console.log("failed", data);
-                return "Request failed";
-            });
-    };
 
     /**
      * Gets ALL from api
@@ -41,6 +23,21 @@ app.service('APIService', ['$http', function ($http) {
                 return "Request failed";
             });
     };
+
+    service.getOffer = function(id){
+        return $http(
+            {
+                method: 'GET',
+                url: "/offer/"+id
+            })
+            .success(function (data, status) {
+                return data;
+            })
+            .error(function (data, status) {
+                console.log("failed", data);
+                return "Request failed";
+            });
+    }
 
     /**
      * Get additional information from device

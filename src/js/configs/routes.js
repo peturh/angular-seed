@@ -18,5 +18,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             controller: 'MainController',
             controllerAs: 'main'
         })
-
+        .state('/offer', {
+            url : '/offer',
+            templateUrl : 'offer.html',
+            controller : 'OfferController',
+            controllerAs : 'offer'
+        })
 }]);

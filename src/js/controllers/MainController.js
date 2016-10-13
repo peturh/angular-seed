@@ -8,7 +8,6 @@ app.controller('MainController', ['$scope', 'APIService',
          * This is a standard array of words
          * @type {string[]}
          */
-
         main.list = ['First', 'Second', 'Third', 'Fourth', 'The End']
 
         /**
@@ -22,11 +21,10 @@ app.controller('MainController', ['$scope', 'APIService',
         main.init = function () {
 
             //This is a promise from angular, it's synchronous so you have to wait for the response inside a promise...
-            APIService.getSomething().then(function (data) {
-
+            APIService.getSomething().then(function (response) {
                 //Please log data variable to understand how this works
-                console.log(data);
-                main.dataFromService = data.response;
+                main.secondList = response.data;
+                console.log(main.secondList);
             })
         };
 

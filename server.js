@@ -26,7 +26,7 @@ app.get('/site', function (req, res) {
  * The path for getting a device
  */
 app.get('/getSomething', function (req, res) {
-    
+
     /**
      * This is an array of objects
      */

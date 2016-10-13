@@ -1,6 +1,5 @@
 // Vendor code
 var angular = require('angular');
-var ngMaterial = require('angular-material');
 var ngAnimate = require('angular-animate');
 var ngMessages = require('angular-messages');
 var ngUIRouter = require('angular-ui-router');

@@ -2,9 +2,6 @@ const express = require('express');
 const serveStatic = require('serve-static');
 const request = require('request');
 const app = express();
-const username = process.env.username;
-const password = process.env.password;
-const url = process.env.url;
 
 app.use(serveStatic(__dirname + "/dist"));
 app.listen(9090, function () {
@@ -16,7 +13,6 @@ app.listen(9090, function () {
  * The path for getting available sites
  */
 app.get('/site', function (req, res) {
-
 
     apiPost('site.php',data, function (apiResponse) {
         res.send(apiResponse);

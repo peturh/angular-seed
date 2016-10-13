@@ -1,0 +1,21 @@
+<div class="container" ng-controller="MainController as main">
+    <div class="row">
+        <div class="col-md-6">
+            Hello world!
+            <!-- This is a basic angular directive that traverses through a list of elements -->
+            <div ng-repeat="item in main.list">
+
+                {{item}}
+
+            </div>
+
+        </div>
+        <div class="col-md-6">
+            What's up!
+            <!-- Please observe that this {{item}} is outside of the main.list scope. -->
+            <div ng-repeat="item in main.secondList">
+                {{item}}
+            </div>
+        </div>
+    </div>
+</div>

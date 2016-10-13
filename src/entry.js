@@ -21,5 +21,4 @@ var APIService = require('services/APIService');
 var MainTemplate = require('main.html');
 var ToolbarTemplate = require('toolbar.html');
 
-var materialcss = require('angular-material/angular-material.min.css');
 var stylesheetsLess = require('stylesheets.less');

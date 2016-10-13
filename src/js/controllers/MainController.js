@@ -11,29 +11,6 @@ app.controller('MainController', ['$scope', 'APIService',
 
         main.list = ['First', 'Second', 'Third', 'Fourth', 'The End']
 
-
-        /**
-         * This is an array of objects
-         */
-
-        main.secondList = [
-            {
-                name: "First"
-            },
-            {
-                name: "Second"
-            },
-            {
-                name: "Third"
-            },
-            {
-                name: "Fourth"
-            },
-            {
-                name: "The End"
-            }
-        ];
-
         /**
          * The functions in this file is available from "main.html"
          * if you write them with the scope: main
@@ -45,7 +22,7 @@ app.controller('MainController', ['$scope', 'APIService',
         main.init = function () {
 
             //This is a promise from angular, it's synchronous so you have to wait for the response inside a promise...
-            APIService.get().then(function (data) {
+            APIService.getSomething().then(function (data) {
 
                 //Please log data variable to understand how this works
                 console.log(data);

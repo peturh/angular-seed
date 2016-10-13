@@ -12,7 +12,7 @@ app.service('APIService', ['$http', function ($http) {
         return $http(
             {
                 method: 'GET',
-                url: "/get/"+id
+                url: "/getSomethingWithId/"+id
             })
             .success(function (data, status) {
                 return data;
@@ -31,7 +31,7 @@ app.service('APIService', ['$http', function ($http) {
         return $http(
             {
                 method: 'GET',
-                url: "/get"
+                url: "/getSomething"
             })
             .success(function (data, status) {
                 return data;
@@ -51,7 +51,7 @@ app.service('APIService', ['$http', function ($http) {
         return $http(
             {
                 method: 'POST',
-                url: "/set/"+id,
+                url: "/setSomething/"+id,
             })
             .success(function (data, status) {
                 return data;

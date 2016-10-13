@@ -17,12 +17,7 @@ app.listen(9090, function () {
  */
 app.get('/site', function (req, res) {
 
-    var data = {
-        api : "JSON",
-        a : "retrieve",
-        u : username,
-        p : password
-    };
+
     apiPost('site.php',data, function (apiResponse) {
         res.send(apiResponse);
     });
@@ -30,18 +25,36 @@ app.get('/site', function (req, res) {
 /**
  * The path for getting a device
  */
-app.get('/device/:id', function (req, res) {
-    console.log(req.params.id);
-    var data = {
-        api : "JSON",
-        a : "retrieve",
-        u : username,
-        p : password,
-        'deviceid[]' : req.params.id
-    };
-    apiPost('device.php',data, function (apiResponse) {
-        res.send(apiResponse);
-    });
+app.get('/getSomething', function (req, res) {
+    
+    /**
+     * This is an array of objects
+     */
+
+    var listWithObjects= [
+        {
+            name: "First",
+            id: "1"
+        },
+        {
+            name: "Second",
+            id: "2"
+        },
+        {
+            name: "Third",
+            id: "3"
+        },
+        {
+            name: "Fourth",
+            id: "4"
+        },
+        {
+            name: "The End",
+            id: "5"
+        }
+    ];
+
+    res.send(listWithObjects);
 });
 
 /**
@@ -58,8 +71,8 @@ function apiPost(path, data, callback) {
     var fullPath = url + path;
     var options = {
         url: fullPath,
-        form: data,
-        mimeType: 'application/x-www-form-urlencoded'
+        data: data,
+        mimeType: 'application/json'
     };
     request.post(options, function (error, response, body) {
         console.log(error);

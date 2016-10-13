@@ -58,8 +58,7 @@ module.exports = {
             {
                 test: /[\/\\]node_modules[\/\\]some-legacy-script[\/\\]index\.js$/,
                 loader: "legacy"
-            },
-
+            }
         ]
     },
     jshint: {

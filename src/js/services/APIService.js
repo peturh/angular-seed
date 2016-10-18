@@ -23,6 +23,21 @@ app.service('APIService', ['$http', function ($http) {
                 return "Request failed";
             });
     };
+	
+	service.getNews = function () {
+        return $http(
+            {
+                method: 'GET',
+                url: "/getNews"
+            })
+            .success(function (data, status) {
+                return data;
+            })
+            .error(function (data, status) {
+                console.log("failed", data);
+                return "Request failed";
+            });
+    };
 
     service.getOffer = function(id){
         return $http(

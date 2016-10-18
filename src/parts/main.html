@@ -1,6 +1,7 @@
-<!--<div class="container m-t-2" ng-controller="MainController as main" ng-init="main.init()">
+<div class="container m-t-2" ng-controller="MainController as main" ng-init="main.init()">
     <div class="row">
         <div class="col-md-6">
+            <input class="input" ng-model="main.myInputField"> {{main.myInputField}}
             <div ng-repeat="item in main.secondList">
                 <div class="card">
                     <img class="card-img-top" src="//placeholdit.imgix.net/~text?txtsize=33&txt=440%C3%97150&w=440&h=150" alt="Card image cap">
@@ -14,49 +15,4 @@
             </div>
         </div>
     </div>
-</div>-->
-
- <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-4">Landskrona</h1>
-        <p class="lead">Some text here.</p>
-      
-      </div>
-    </div>
-
-<div class="container m-t-2" ng-controller="MainController as main" ng-init="main.init()">
-    <h3>Hetast</h3>
-    <div class="card-deck-wrapper">
-        <div class="card-deck">
-            <div ng-repeat="item in main.secondList" class="card">
-                <img class="card-img-top" src="{{item.imgUrl}}" width="100%" alt="Card image cap">
-                <div class="card-block text-xs-center">
-                    <h4 class="card-title">{{item.name}}</h4>
-                    <p class="card-text text-muted">{{item.brand}}</p>
-                    <a ng-click="main.goToOffer($index)" class="btn btn-primary">mer info</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    
-    <h3>Nyheter</h3>
-    <div class="card-deck-wrapper">
-        <div class="card-deck">
-            <div ng-repeat="item in main.newsList" class="card">
-                <img class="card-img-top" src="{{item.imgUrl}}" width="100%" alt="Card image cap">
-                <div class="card-block">
-                	<a href="{{item.url}}">
-                   		<h4 class="card-title">{{item.heading}}</h4>
-                    	<p class="card-text">{{item.text}}</p>
-                    	<p class="card-text text-muted">{{item.date}}</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    
-    
 </div>

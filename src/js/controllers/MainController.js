@@ -24,12 +24,6 @@ app.controller('MainController', ['$scope', 'APIService','$state',
                 main.secondList = response.data;
                 console.log(main.secondList);
             });
-			//This is a promise from angular, it's synchronous so you have to wait for the response inside a promise...
-            APIService.getNews().then(function (response) {
-                //Please log data variable to understand how this works
-                main.newsList = response.data;
-                console.log(main.newsList);
-            });
         };
 
         main.goToOffer = function(index){

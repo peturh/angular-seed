@@ -26,7 +26,9 @@
 <div class="container m-t-2" ng-controller="MainController as main" ng-init="main.init()">
     <h3>Hetast</h3>
     <div class="card-deck">
-        <div ng-repeat="item in main.secondList" class="card">
+
+        <div ng-repeat="item in main.secondList" class="card" hide-element>
+
             <img class="card-img-top" ng-src="{{item.imgUrl}}" width="100%" alt="Card image cap">
             <div class="card-block text-xs-center">
                 <h4 class="card-title">{{item.name}}</h4>

@@ -19,6 +19,8 @@ var OfferController = require('controllers/OfferController');
 
 // Directives
 
+var HideElement = require('directives/HideElement');
+
 //Services
 var APIService = require('services/APIService');
 // Templates

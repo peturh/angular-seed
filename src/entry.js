@@ -1,8 +1,12 @@
 // Vendor code
+$ = jQuery = require('jquery');
 var angular = require('angular');
 var ngAnimate = require('angular-animate');
 var ngMessages = require('angular-messages');
 var ngUIRouter = require('angular-ui-router');
+var Tether = require('tether/dist/js/tether.min.js');
+window.Tether = Tether;
+var bootstrap = require('bootstrap/js/bootstrap');
 
 //app
 var app = require('app');
@@ -24,3 +28,4 @@ var ToolbarTemplate = require('toolbar.html');
 var OfferTemplate = require('offer.html');
 
 var stylesheetsLess = require('stylesheets.less');
+var bootstrap = require('bootstrap/css/bootstrap.css');

@@ -5,8 +5,7 @@ app.directive('hideElement', [
             restrict: 'A',
             link: function (scope, element, attr) {
                 element.bind('click',function(){
-                    console.log("EVENT");
-                    console.log(element)
+                    console.log(element) //kolla in detta i loggen så förstår du nästa steg!
                     element[0].style.display = "none";
                 });
             }

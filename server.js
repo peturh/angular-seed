@@ -5,7 +5,7 @@ const app = express();
 
 app.use(serveStatic(__dirname + "/dist"));
 app.listen(9090, function () {
-        console.log("Running api server.")
+        console.log("Running api server on port: "+9090);
     }
 );
 

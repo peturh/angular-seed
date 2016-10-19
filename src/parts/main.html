@@ -40,16 +40,19 @@
 
 
     <h3>Nyheter</h3>
-    <div class="card-deck">
-        <div ng-repeat="item in main.newsList" class="card">
-            <img class="card-img-top" ng-src="{{item.imgUrl}}" width="100%" alt="Card image cap">
-            <div class="card-block">
-                <a href="{{item.url}}">
+    <div class="card-columns">
+    
+    <div ng-repeat="item in main.newsList" class="card">
+	
+           		<img class="card-img-top" ng-src="{{item.imgUrl}}" width="100%" alt="Card image cap">
+            	<div class="card-block">
+                	<a href="{{item.url}}">
                     <h4 class="card-title">{{item.heading}}</h4>
                     <p class="card-text">{{item.text}}</p>
                     <p class="card-text text-muted">{{item.date}}</p>
-                </a>
-            </div>
-        </div>
+                	</a>
+            	</div>
+			</div>
+        
     </div>
 </div>

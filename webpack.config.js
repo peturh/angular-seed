@@ -11,7 +11,6 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var JS_PATH = path.resolve(__dirname, "src/js/");
 var LESS_PATH = path.resolve(__dirname, "src/less/");
 var PARTS_PATH = path.resolve(__dirname, "src/parts/");
-var CSS_PATH = path.resolve(__dirname,'src/less/');
 
 var DIST_PATH = path.resolve(__dirname, "dist");
 
@@ -54,7 +53,7 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                loader: 'style!css'
+                loader: "style!css"
             },
             {
                 test: /[\/\\]node_modules[\/\\]some-legacy-script[\/\\]index\.js$/,

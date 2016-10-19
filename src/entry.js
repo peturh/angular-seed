@@ -6,7 +6,7 @@ var ngMessages = require('angular-messages');
 var ngUIRouter = require('angular-ui-router');
 var Tether = require('tether/dist/js/tether.min.js');
 window.Tether = Tether;
-var bootstrap = require('bootstrap/js/bootstrap');
+var bootstrap = require('bootstrap/js/bootstrap'); //this is from lib/ folder
 
 //app
 var app = require('app');
@@ -28,4 +28,4 @@ var ToolbarTemplate = require('toolbar.html');
 var OfferTemplate = require('offer.html');
 
 var stylesheetsLess = require('stylesheets.less');
-var bootstrap = require('bootstrap/css/bootstrap.css');
+var bootstrap = require('bootstrap/css/bootstrap.css'); //this is from lib/ folder

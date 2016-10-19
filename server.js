@@ -87,9 +87,34 @@ app.get('/getNews', function (req, res) {
         },
 		{
             heading: "Historisk kvällstur med stadens nöjesliv i fokus",
-            id: "3",
+            id: "4",
 			date: "2016-10-12",
 			imgUrl:"http://www.papperstidningen.se/wp-content/uploads/2016/09/39LA-rundvandring_hotell-800x445.jpg",
+            url : "http://www.papperstidningen.se/2016/09/historisk-kvallstur-med-stadens-nojesliv-i-fokus/",
+            text : "Visste du att Landskrona hade fem biografer under några år på 50-talet? Och att det haft sitt egna Gröna lund?",
+        },
+        {
+            heading: "Historisk kvällstur med stadens nöjesliv i fokus",
+            id: "5",
+            date: "2016-10-12",
+            imgUrl:"http://www.papperstidningen.se/wp-content/uploads/2016/09/39LA-rundvandring_hotell-800x445.jpg",
+            url : "http://www.papperstidningen.se/2016/09/historisk-kvallstur-med-stadens-nojesliv-i-fokus/",
+            text : "Visste du att Landskrona hade fem biografer under några år på 50-talet? Och att det haft sitt egna Gröna lund?",
+        },
+
+        {
+            heading: "Historisk kvällstur med stadens nöjesliv i fokus",
+            id: "6",
+            date: "2016-10-12",
+            imgUrl:"http://www.papperstidningen.se/wp-content/uploads/2016/09/39LA-rundvandring_hotell-800x445.jpg",
+            url : "http://www.papperstidningen.se/2016/09/historisk-kvallstur-med-stadens-nojesliv-i-fokus/",
+            text : "Visste du att Landskrona hade fem biografer under några år på 50-talet? Och att det haft sitt egna Gröna lund?",
+        }
+        ,{
+            heading: "Historisk kvällstur med stadens nöjesliv i fokus",
+            id: "7",
+            date: "2016-10-12",
+            imgUrl:"http://www.papperstidningen.se/wp-content/uploads/2016/09/39LA-rundvandring_hotell-800x445.jpg",
             url : "http://www.papperstidningen.se/2016/09/historisk-kvallstur-med-stadens-nojesliv-i-fokus/",
             text : "Visste du att Landskrona hade fem biografer under några år på 50-talet? Och att det haft sitt egna Gröna lund?",
         }

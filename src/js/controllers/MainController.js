@@ -33,7 +33,7 @@ app.controller('MainController', ['$scope', 'APIService','$state',
         };
 
         main.goToOffer = function(index){
-            $state.go('/offer');
+            $state.go('/offer', {id : index});
         };
 
         /**

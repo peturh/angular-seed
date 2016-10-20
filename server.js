@@ -130,7 +130,7 @@ app.get('/offer/:id', function(req,res){
     console.log(id);
 
     switch (id) {
-      case "1":
+      case "0":
       var offer = {
     	name: "Skeppshult Natur",
       brand:"Cykelmekano",
@@ -142,7 +142,7 @@ app.get('/offer/:id', function(req,res){
       };
 
       break;
-        case "2":
+        case "1":
         var offer = {
         name: "Vintersko i skin",
         brand:"Wittingsskor",

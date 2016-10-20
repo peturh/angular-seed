@@ -153,6 +153,16 @@ app.get('/offer/:id', function(req,res){
         ordPrice:"Ordinarie pris 800 kr",
         };
         break;
+        case "2":
+        var offer = {
+        name: "Lax",
+        brand:"Stefan Pålssons",
+        imgUrl:"http://rapp.papperstidningen.se/_img/P%C3%A5lsson%20bild%201.jpg",
+        description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit. ",
+        price:"Nu.100 kr/kg",
+        ordPrice:"Ordinarie pris 150 kr/kg",
+        }
+        break;
 
       default:
       var offer = {

@@ -1,11 +1,12 @@
 var app = require('app');
 
-app.controller('OfferController', ['$scope','APIService',function($scope,APIService){
+app.controller('OfferController', ['$scope','APIService','$stateParams',function($scope,APIService,$stateParams){
 
     var offer = this;
+    var id = $stateParams.id;
 
     offer.init = function(){
-        APIService.getOffer(1).then(function(response){
+        APIService.getOffer(id).then(function(response){
             offer.theOffer = response.data;
         })
     };

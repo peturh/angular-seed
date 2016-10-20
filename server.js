@@ -29,25 +29,25 @@ app.get('/getSomething', function (req, res) {
 
     var listWithObjects= [
         {
-            name: "Skeppshult Natur",
-            id: "1",
-			brand:"Cykelmekano",
-			imgUrl:"http://rapp.papperstidningen.se/_img/2806-0701-1704-59-1.jpg",
-            description : "En äkta Natur i grund och botten.",
+          name: "Skeppshult Natur",
+          id: "1",
+          brand:"Cykelmekano",
+          imgUrl:"http://rapp.papperstidningen.se/_img/2806-0701-1704-59-1.jpg",
+          description : "En äkta Natur i grund och botten.",
         },
         {
-            name: "Skor",
-            id: "2",
-			brand:"Wittingsskor",
-			imgUrl:"http://rapp.papperstidningen.se/_img/Wittings-3_v47.jpg",
-            description : "detta är texten",
+          name: "Skor",
+          id: "2",
+			    brand:"Wittingsskor",
+          imgUrl:"http://rapp.papperstidningen.se/_img/Wittings-3_v47.jpg",
+          description : "detta är texten",
         },
         {
-            name: "Lax",
-            id: "3",
-			brand:"Stefan Pålssons",
-			imgUrl:"http://rapp.papperstidningen.se/_img/P%C3%A5lsson%20bild%201.jpg",
-            description : "detta är texten",
+          name: "Lax",
+          id: "3",
+          brand:"Stefan Pålssons",
+          imgUrl:"http://rapp.papperstidningen.se/_img/P%C3%A5lsson%20bild%201.jpg",
+          description : "detta är texten",
         }
     ];
 
@@ -126,17 +126,47 @@ app.get('/getNews', function (req, res) {
 
 app.get('/offer/:id', function(req,res){
     var id = req.params.id;
+    var offer;
     console.log(id);
 
-    var offer = {
-  		name: "Skeppshult Natur",
-       	brand:"Cykelmekano",
-		location:"Stora Norregatan 7 Landskrona",
-		imgUrl:"http://rapp.papperstidningen.se/_img/2806-0701-1704-59-1.jpg",
-        description : "NATUR En äkta Natur i grund och botten. Något enklare utrustad än Natur Premium, men upplevelsen är densamma. Lugn, majestätisk, men ändå lätt i känslan (lätt ram i höghållfast stål).",
-		price:"Nu.7000 kr",
-		ordPrice:"Ordinarie pris 8000kr",
-    };
+    switch (id) {
+      case "1":
+      var offer = {
+    	name: "Skeppshult Natur",
+      brand:"Cykelmekano",
+  		location:"Stora Norregatan 7 Landskrona",
+  		imgUrl:"http://rapp.papperstidningen.se/_img/2806-0701-1704-59-1.jpg",
+      description : "NATUR En äkta Natur i grund och botten. Något enklare utrustad än Natur Premium, men upplevelsen är densamma. Lugn, majestätisk, men ändå lätt i känslan (lätt ram i höghållfast stål).",
+  		price:"Nu.7000 kr",
+  		ordPrice:"Ordinarie pris 8000kr",
+      };
+
+      break;
+        case "2":
+        var offer = {
+        name: "Vintersko i skin",
+        brand:"Wittingsskor",
+        location:"Östergatan 8 Landskrona",
+        imgUrl:"http://rapp.papperstidningen.se/_img/Wittings-3_v47.jpg",
+        description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit. ",
+        price:"Nu.549 kr",
+        ordPrice:"Ordinarie pris 800 kr",
+        };
+        break;
+
+      default:
+      var offer = {
+      name: "error",
+      brand:"",
+      location:"",
+      imgUrl:"",
+      description : " ",
+      price:"",
+      ordPrice:"",
+      };
+    }
+
+
 
     res.send(offer);
 

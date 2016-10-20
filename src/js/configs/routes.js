@@ -19,7 +19,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             controllerAs: 'main'
         })
         .state('/offer', {
-            url : '/offer',
+            url : '/offer/{id}',
             templateUrl : 'offer.html',
             controller : 'OfferController',
             controllerAs : 'offer'

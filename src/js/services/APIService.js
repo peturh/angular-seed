@@ -5,7 +5,7 @@ app.service('APIService', ['$http', function ($http) {
     var service = {};
 
 
-    /**
+    /* *
      * Gets ALL from api
      * @returns {*} - The requested stuff
      */
@@ -23,7 +23,7 @@ app.service('APIService', ['$http', function ($http) {
                 return "Request failed";
             });
     };
-	
+
 	service.getNews = function () {
         return $http(
             {
@@ -54,7 +54,22 @@ app.service('APIService', ['$http', function ($http) {
             });
     }
 
-    /**
+    service.getApi = function () {
+        return $http(
+            {
+                method: 'GET',
+                url: "/apiTest"
+            })
+            .success(function (data, status) {
+                return data;
+            })
+            .error(function (data, status) {
+                console.log("failed", data);
+                return "Request failed";
+            });
+    };
+
+    /* *
      * Get additional information from device
      * @returns {*} - The device
      */

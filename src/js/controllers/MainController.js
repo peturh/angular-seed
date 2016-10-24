@@ -4,7 +4,7 @@ app.controller('MainController', ['$scope', 'APIService','$state',
     function ($scope, APIService, $state) {
         var main = this; // just to
 
-        /**
+        /* *
          * This is a standard array of words
          * @type {string[]}
          */
@@ -30,13 +30,19 @@ app.controller('MainController', ['$scope', 'APIService','$state',
                 main.newsList = response.data;
                 console.log(main.newsList);
             });
+            APIService.getApi().then(function (response) {
+                //Please log data variable to understand how this works
+                main.newsList = response.data;
+                console.log(main.apiList);
+            });
         };
 
         main.goToOffer = function(index){
             $state.go('/offer', {id : index});
         };
 
-        /**
+
+        /* *
          * Just a function that does something
          * @param site - The selected site
          */

@@ -9,7 +9,7 @@ app.listen(9090, function () {
     }
 );
 
-/**
+/* *
  * The path for getting available sites
  */
 app.get('/site', function (req, res) {
@@ -18,12 +18,12 @@ app.get('/site', function (req, res) {
         res.send(apiResponse);
     });
 });
-/**
+/* *
  * The path for getting a device
  */
 app.get('/getSomething', function (req, res) {
 
-    /**
+    /* *
      * This is an array of objects
      */
 
@@ -56,7 +56,7 @@ app.get('/getSomething', function (req, res) {
 
 app.get('/getNews', function (req, res) {
 
-    /**
+    /* *
      * This is an array of objects
      */
 
@@ -131,18 +131,18 @@ app.get('/offer/:id', function(req,res){
 
     switch (id) {
       case "0":
-      var offer = {
-    	name: "Skeppshult Natur",
-      brand:"Cykelmekano",
-  		location:"Stora Norregatan 7 Landskrona",
-  		imgUrl:"http://rapp.papperstidningen.se/_img/2806-0701-1704-59-1.jpg",
-      description : "NATUR En äkta Natur i grund och botten. Något enklare utrustad än Natur Premium, men upplevelsen är densamma. Lugn, majestätisk, men ändå lätt i känslan (lätt ram i höghållfast stål).",
-  		price:"Nu.7000 kr",
-  		ordPrice:"Ordinarie pris 8000kr",
-      };
+        var offer = {
+      	name: "Skeppshult Natur",
+        brand:"Cykelmekano",
+    		location:"Stora Norregatan 7 Landskrona",
+    		imgUrl:"http://rapp.papperstidningen.se/_img/2806-0701-1704-59-1.jpg",
+        description : "NATUR En äkta Natur i grund och botten. Något enklare utrustad än Natur Premium, men upplevelsen är densamma. Lugn, majestätisk, men ändå lätt i känslan (lätt ram i höghållfast stål).",
+    		price:"Nu.7000 kr",
+    		ordPrice:"Ordinarie pris 8000kr",
+        };
 
       break;
-        case "1":
+      case "1":
         var offer = {
         name: "Vintersko i skin",
         brand:"Wittingsskor",
@@ -152,7 +152,7 @@ app.get('/offer/:id', function(req,res){
         price:"Nu.549 kr",
         ordPrice:"Ordinarie pris 800 kr",
         };
-        break;
+      break;
         case "2":
         var offer = {
         name: "Lax",
@@ -162,7 +162,7 @@ app.get('/offer/:id', function(req,res){
         price:"Nu.100 kr/kg",
         ordPrice:"Ordinarie pris 150 kr/kg",
         }
-        break;
+      break;
 
       default:
       var offer = {
@@ -182,7 +182,7 @@ app.get('/offer/:id', function(req,res){
 
 });
 
-/**
+/* *
  *
  * A function to proxy requests to the webapp.
  *
@@ -205,3 +205,18 @@ function apiGet(path, data, callback) {
         return callback(body);
     });
 }
+
+app.get('/apiTest', function(req, res) {
+
+    //var fullPath = url + path;
+    var options = {
+        url: "http://polls.apiblueprint.org/questions",
+        //data: 'get',
+        mimeType: 'application/json'
+    };
+    request.get(options, function (error, response, body) {
+        console.log(error);
+        console.log(body);
+        res.send(body);
+    });
+});

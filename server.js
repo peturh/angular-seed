@@ -215,8 +215,8 @@ app.get('/apiTest', function(req, res) {
         mimeType: 'application/json'
     };
     request.get(options, function (error, response, body) {
-        console.log(error);
-        console.log(body);
+      //  console.log(error);
+      //  console.log(body);
         res.send(body);
     });
 });

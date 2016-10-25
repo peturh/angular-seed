@@ -32,7 +32,7 @@ app.controller('MainController', ['$scope', 'APIService','$state',
             });
             APIService.getApi().then(function (response) {
                 //Please log data variable to understand how this works
-                main.newsList = response.data;
+                main.apiList = response.data;
                 console.log(main.apiList);
             });
         };

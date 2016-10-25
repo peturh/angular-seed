@@ -1,0 +1,15 @@
+<div class="container m-t-2" ng-controller="TestController as Test" ng-init="test.init()">
+<h3>big fat test</h3>
+<div class="card-columns">
+
+<div ng-repeat="row in test.apiList" class="card">
+  <h4 class="card-title">{{row.question}}</h4>
+  <div ng-repeat="col in row.choices">
+    <p class="card-text">{{col.choice}} <span class="card-text text-muted">votes: {{col.votes}}</span></p>
+  </div>
+
+
+  </div>
+
+</div>
+</div>

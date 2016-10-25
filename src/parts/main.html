@@ -25,7 +25,8 @@
 
 <div class="container m-t-2" ng-controller="MainController as main" ng-init="main.init()">
     <h3>Hetast</h3>
-    <div class="card-deck">
+    <div class="row">
+      <div class="col-xl-12">
 
         <div ng-repeat="item in main.secondList" class="card" ng-click="main.goToOffer($index)">
 
@@ -35,24 +36,25 @@
                 <p class="card-text text-muted">{{item.brand}}</p>
             </div>
         </div>
+      </div>
     </div>
 
 
     <h3>Nyheter</h3>
-    <div class="card-columns">
+    <div class="row">
+      <div class="col-xl-12">
 
     <div ng-repeat="item in main.newsList" class="card">
-
-           		<img class="card-img-top" ng-src="{{item.imgUrl}}" width="100%" alt="Card image cap">
-            	<div class="card-block">
+           		<div class="card-block">
                 	<a href="{{item.url}}">
+                    <img class="float-xs-left img-thumbnail" ng-src="{{item.imgUrl}}" width="50%" alt="Card image cap">
                     <h4 class="card-title">{{item.heading}}</h4>
-                    <p class="card-text">{{item.text}}</p>
+                    <!-- <p class="card-text">{{item.text}}</p> -->
                     <p class="card-text text-muted">{{item.date}}</p>
                 	</a>
             	</div>
 			</div>
-
+</div>
     </div>
 
 

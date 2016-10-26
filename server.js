@@ -5,7 +5,7 @@ const app = express();
 
 app.use(serveStatic(__dirname + "/dist"));
 app.listen(9090, function () {
-        console.log("Running api server on port: "+9090);
+        console.log("Running api server on port: " + 9090);
     }
 );
 
@@ -14,7 +14,7 @@ app.listen(9090, function () {
  */
 app.get('/site', function (req, res) {
 
-    apiPost('site.php',data, function (apiResponse) {
+    apiPost('site.php', data, function (apiResponse) {
         res.send(apiResponse);
     });
 });
@@ -27,27 +27,27 @@ app.get('/getSomething', function (req, res) {
      * This is an array of objects
      */
 
-    var listWithObjects= [
+    var listWithObjects = [
         {
-          name: "Skeppshult Natur",
-          id: "1",
-          brand:"Cykelmekano",
-          imgUrl:"http://rapp.papperstidningen.se/_img/2806-0701-1704-59-1.jpg",
-          description : "En äkta Natur i grund och botten.",
+            name: "Skeppshult Natur",
+            id: "1",
+            brand: "Cykelmekano",
+            imgUrl: "http://rapp.papperstidningen.se/_img/2806-0701-1704-59-1.jpg",
+            description: "En äkta Natur i grund och botten.",
         },
         {
-          name: "Skor",
-          id: "2",
-			    brand:"Wittingsskor",
-          imgUrl:"http://rapp.papperstidningen.se/_img/Wittings-3_v47.jpg",
-          description : "detta är texten",
+            name: "Skor",
+            id: "2",
+            brand: "Wittingsskor",
+            imgUrl: "http://rapp.papperstidningen.se/_img/Wittings-3_v47.jpg",
+            description: "detta är texten",
         },
         {
-          name: "Lax",
-          id: "3",
-          brand:"Stefan Pålssons",
-          imgUrl:"http://rapp.papperstidningen.se/_img/P%C3%A5lsson%20bild%201.jpg",
-          description : "detta är texten",
+            name: "Lax",
+            id: "3",
+            brand: "Stefan Pålssons",
+            imgUrl: "http://rapp.papperstidningen.se/_img/P%C3%A5lsson%20bild%201.jpg",
+            description: "detta är texten",
         }
     ];
 
@@ -60,63 +60,63 @@ app.get('/getNews', function (req, res) {
      * This is an array of objects
      */
 
-    var listWithObjects= [
+    var listWithObjects = [
         {
             heading: "Färjor på batteri ger effekt i Landskrona",
             id: "1",
-			date: "2016-10-12",
-			imgUrl:"http://www.papperstidningen.se/wp-content/uploads/2016/10/40la-farjebatteri-5-800x445.jpg",
-            url : "http://www.papperstidningen.se/2016/10/farjor-pa-batteri-ger-effekt-i-landskrona/",
-            text : "Färjepassagerarna kommer snart att tura mellan Helsingborg och Helsingör på el istället för diesel.",
+            date: "2016-10-12",
+            imgUrl: "http://www.papperstidningen.se/wp-content/uploads/2016/10/40la-farjebatteri-5-800x445.jpg",
+            url: "http://www.papperstidningen.se/2016/10/farjor-pa-batteri-ger-effekt-i-landskrona/",
+            text: "Färjepassagerarna kommer snart att tura mellan Helsingborg och Helsingör på el istället för diesel.",
         },
         {
             heading: "Nu är plan- och byggchefen på plats",
             id: "2",
-			date: "2016-10-12",
-			imgUrl:"http://www.papperstidningen.se/wp-content/uploads/2016/10/planchef-800x445.jpg",
-            url : "http://www.papperstidningen.se/2016/10/nu-ar-plan-och-byggchefen-pa-plats/",
-            text : "Linnea Widing gjorde förra veckan sin första vecka som plan- och byggchef. Det är en tjänst som är helt ny i Svalövs kommun.",
+            date: "2016-10-12",
+            imgUrl: "http://www.papperstidningen.se/wp-content/uploads/2016/10/planchef-800x445.jpg",
+            url: "http://www.papperstidningen.se/2016/10/nu-ar-plan-och-byggchefen-pa-plats/",
+            text: "Linnea Widing gjorde förra veckan sin första vecka som plan- och byggchef. Det är en tjänst som är helt ny i Svalövs kommun.",
         },
         {
             heading: "Varje match är en final",
             id: "3",
-			date: "2016-10-12",
-			imgUrl:"http://www.papperstidningen.se/wp-content/uploads/2016/10/agim-800x445.jpg",
-            url : "http://www.papperstidningen.se/2016/10/varje-match-ar-en-final/",
-            text : "Med fem matcher kvar ligger BoIS strax under kvalstrecket för avancemang uppåt. Papperstidningen tog ett snack med tränaren Agim Sopi.",
+            date: "2016-10-12",
+            imgUrl: "http://www.papperstidningen.se/wp-content/uploads/2016/10/agim-800x445.jpg",
+            url: "http://www.papperstidningen.se/2016/10/varje-match-ar-en-final/",
+            text: "Med fem matcher kvar ligger BoIS strax under kvalstrecket för avancemang uppåt. Papperstidningen tog ett snack med tränaren Agim Sopi.",
         },
-		{
+        {
             heading: "Historisk kvällstur med stadens nöjesliv i fokus",
             id: "4",
-			date: "2016-10-12",
-			imgUrl:"http://www.papperstidningen.se/wp-content/uploads/2016/09/39LA-rundvandring_hotell-800x445.jpg",
-            url : "http://www.papperstidningen.se/2016/09/historisk-kvallstur-med-stadens-nojesliv-i-fokus/",
-            text : "Visste du att Landskrona hade fem biografer under några år på 50-talet? Och att det haft sitt egna Gröna lund?",
+            date: "2016-10-12",
+            imgUrl: "http://www.papperstidningen.se/wp-content/uploads/2016/09/39LA-rundvandring_hotell-800x445.jpg",
+            url: "http://www.papperstidningen.se/2016/09/historisk-kvallstur-med-stadens-nojesliv-i-fokus/",
+            text: "Visste du att Landskrona hade fem biografer under några år på 50-talet? Och att det haft sitt egna Gröna lund?",
         },
         {
             heading: "Historisk kvällstur med stadens nöjesliv i fokus",
             id: "5",
             date: "2016-10-12",
-            imgUrl:"http://www.papperstidningen.se/wp-content/uploads/2016/09/39LA-rundvandring_hotell-800x445.jpg",
-            url : "http://www.papperstidningen.se/2016/09/historisk-kvallstur-med-stadens-nojesliv-i-fokus/",
-            text : "Visste du att Landskrona hade fem biografer under några år på 50-talet? Och att det haft sitt egna Gröna lund?",
+            imgUrl: "http://www.papperstidningen.se/wp-content/uploads/2016/09/39LA-rundvandring_hotell-800x445.jpg",
+            url: "http://www.papperstidningen.se/2016/09/historisk-kvallstur-med-stadens-nojesliv-i-fokus/",
+            text: "Visste du att Landskrona hade fem biografer under några år på 50-talet? Och att det haft sitt egna Gröna lund?",
         },
 
         {
             heading: "Historisk kvällstur med stadens nöjesliv i fokus",
             id: "6",
             date: "2016-10-12",
-            imgUrl:"http://www.papperstidningen.se/wp-content/uploads/2016/09/39LA-rundvandring_hotell-800x445.jpg",
-            url : "http://www.papperstidningen.se/2016/09/historisk-kvallstur-med-stadens-nojesliv-i-fokus/",
-            text : "Visste du att Landskrona hade fem biografer under några år på 50-talet? Och att det haft sitt egna Gröna lund?",
+            imgUrl: "http://www.papperstidningen.se/wp-content/uploads/2016/09/39LA-rundvandring_hotell-800x445.jpg",
+            url: "http://www.papperstidningen.se/2016/09/historisk-kvallstur-med-stadens-nojesliv-i-fokus/",
+            text: "Visste du att Landskrona hade fem biografer under några år på 50-talet? Och att det haft sitt egna Gröna lund?",
         }
-        ,{
+        , {
             heading: "Historisk kvällstur med stadens nöjesliv i fokus",
             id: "7",
             date: "2016-10-12",
-            imgUrl:"http://www.papperstidningen.se/wp-content/uploads/2016/09/39LA-rundvandring_hotell-800x445.jpg",
-            url : "http://www.papperstidningen.se/2016/09/historisk-kvallstur-med-stadens-nojesliv-i-fokus/",
-            text : "Visste du att Landskrona hade fem biografer under några år på 50-talet? Och att det haft sitt egna Gröna lund?",
+            imgUrl: "http://www.papperstidningen.se/wp-content/uploads/2016/09/39LA-rundvandring_hotell-800x445.jpg",
+            url: "http://www.papperstidningen.se/2016/09/historisk-kvallstur-med-stadens-nojesliv-i-fokus/",
+            text: "Visste du att Landskrona hade fem biografer under några år på 50-talet? Och att det haft sitt egna Gröna lund?",
         }
     ];
 
@@ -124,62 +124,53 @@ app.get('/getNews', function (req, res) {
 });
 
 
-app.get('/offer/:id', function(req,res){
+//Jag fixade till lite i den här requesten. En for-loop är effektivare
+// när man har flera element som man behöver gå igenom.
+
+app.get('/offer/:id', function (req, res) {
     var id = req.params.id;
-    var offer;
-    console.log(id);
+    console.log("HEJ");
+    var list = [
+        {
+            id: "0",
+            name: "Skeppshult Natur",
+            brand: "Cykelmekano",
+            location: "Stora Norregatan 7 Landskrona",
+            imgUrl: "http://rapp.papperstidningen.se/_img/2806-0701-1704-59-1.jpg",
+            description: "NATUR En äkta Natur i grund och botten. Något enklare utrustad än Natur Premium, men upplevelsen är densamma. Lugn, majestätisk, men ändå lätt i känslan (lätt ram i höghållfast stål).",
+            price: "Nu.7000 kr",
+            ordPrice: "Ordinarie pris 8000kr",
+        }, {
+            id: "1",
+            name: "Vintersko i skin",
+            brand: "Wittingsskor",
+            location: "Östergatan 8 Landskrona",
+            imgUrl: "http://rapp.papperstidningen.se/_img/Wittings-3_v47.jpg",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit. ",
+            price: "Nu.549 kr",
+            ordPrice: "Ordinarie pris 800 kr",
+        }, {
+            id: "2",
+            name: "Lax",
+            brand: "Stefan Pålssons",
+            imgUrl: "http://rapp.papperstidningen.se/_img/P%C3%A5lsson%20bild%201.jpg",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit. ",
+            price: "Nu.100 kr/kg",
+            ordPrice: "Ordinarie pris 150 kr/kg",
+        }];
 
-    switch (id) {
-      case "0":
-        var offer = {
-      	name: "Skeppshult Natur",
-        brand:"Cykelmekano",
-    		location:"Stora Norregatan 7 Landskrona",
-    		imgUrl:"http://rapp.papperstidningen.se/_img/2806-0701-1704-59-1.jpg",
-        description : "NATUR En äkta Natur i grund och botten. Något enklare utrustad än Natur Premium, men upplevelsen är densamma. Lugn, majestätisk, men ändå lätt i känslan (lätt ram i höghållfast stål).",
-    		price:"Nu.7000 kr",
-    		ordPrice:"Ordinarie pris 8000kr",
-        };
-
-      break;
-      case "1":
-        var offer = {
-        name: "Vintersko i skin",
-        brand:"Wittingsskor",
-        location:"Östergatan 8 Landskrona",
-        imgUrl:"http://rapp.papperstidningen.se/_img/Wittings-3_v47.jpg",
-        description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit. ",
-        price:"Nu.549 kr",
-        ordPrice:"Ordinarie pris 800 kr",
-        };
-      break;
-        case "2":
-        var offer = {
-        name: "Lax",
-        brand:"Stefan Pålssons",
-        imgUrl:"http://rapp.papperstidningen.se/_img/P%C3%A5lsson%20bild%201.jpg",
-        description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sit. ",
-        price:"Nu.100 kr/kg",
-        ordPrice:"Ordinarie pris 150 kr/kg",
+    for (var i = 0; i < list.length; i++) {
+        if (id === list[i].id) {
+            console.log("Hittade objektet");
+            var offer = list[i];
+            res.send(offer);
         }
-      break;
-
-      default:
-      var offer = {
-      name: "error",
-      brand:"",
-      location:"",
-      imgUrl:"",
-      description : " ",
-      price:"",
-      ordPrice:"",
-      };
+        else {
+            // Om inte objektet hittats skicka error, inte tomt objekt.
+            console.log("Objektet hittades inte");
+            res.send();
+        }
     }
-
-
-
-    res.send(offer);
-
 });
 
 /* *
@@ -206,7 +197,7 @@ function apiGet(path, data, callback) {
     });
 }
 
-app.get('/apiTest', function(req, res) {
+app.get('/apiTest', function (req, res) {
 
     //var fullPath = url + path;
     var options = {
@@ -215,8 +206,8 @@ app.get('/apiTest', function(req, res) {
         mimeType: 'application/json'
     };
     request.get(options, function (error, response, body) {
-      //  console.log(error);
-      //  console.log(body);
+        //  console.log(error);
+        //  console.log(body);
         res.send(body);
     });
 });

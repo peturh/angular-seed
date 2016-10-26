@@ -124,7 +124,7 @@ app.get('/getNews', function (req, res) {
 });
 
 
-//Jag fixade till lite i den här requesten. En for-loop är effektivare
+//Jag fixade till lite i den här requesten. En for-loop är effektivare än switch
 // när man har flera element som man behöver gå igenom.
 
 app.get('/offer/:id', function (req, res) {

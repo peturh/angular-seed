@@ -1,9 +1,12 @@
 {
-  "name": "intro",
+  "name": "iminstad",
   "version": "1.0.0",
   "description": "A little playground to test a fun API and other stuff maybe",
   "main": "server.js",
   "scripts": {
+    "postinstall": "webpack",
+    "build": "docker build -t $npm_package_name:$npm_package_version . && docker tag -f $npm_package_name:$npm_package_version $npm_package_name:latest",
+    "push": "docker push $npm_package_name:$npm_package_version && docker push $npm_package_name:latest",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },

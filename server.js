@@ -130,6 +130,7 @@ app.get('/getNews', function (req, res) {
 app.get('/offer/:id', function (req, res) {
     var id = req.params.id;
     console.log("HEJ");
+    var offer = {};
     var list = [
         {
             id: "0",
@@ -162,15 +163,11 @@ app.get('/offer/:id', function (req, res) {
     for (var i = 0; i < list.length; i++) {
         if (id === list[i].id) {
             console.log("Hittade objektet");
-            var offer = list[i];
-            res.send(offer);
-        }
-        else {
-            // Om inte objektet hittats skicka error, inte tomt objekt.
-            console.log("Objektet hittades inte");
-            res.send();
+            offer = list[i];
         }
     }
+    res.send(offer);
+
 });
 
 /* *
